@@ -3,6 +3,8 @@
  */
 package com.dovsnier.interpreter;
 
+import com.dovsnier.exception.CssStyleSheetException;
+
 /**
  * <pre>
  * AbstractInterpreter
@@ -39,7 +41,11 @@ public abstract class AbstractInterpreter {
 	 * 
 	 * @version 0.0.1
 	 * @param path
+	 *            the current your decide directory
 	 * @param name
+	 *            the current css file name
+	 * 
+	 * @throws CssStyleSheetException
 	 */
-	public abstract void parseCssDocument(final String path, final String name);
+	public abstract void parseCssDocument(final String path, final String name) throws CssStyleSheetException;
 }

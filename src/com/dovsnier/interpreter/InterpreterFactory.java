@@ -3,6 +3,8 @@
  */
 package com.dovsnier.interpreter;
 
+import com.dovsnier.exception.CssStyleSheetException;
+
 /**
  * <pre>
  * InterpreterFactory
@@ -54,7 +56,11 @@ public class InterpreterFactory {
 			String msg = "the currrent name parameter is null, maybe is fatal.";
 			throw new IllegalArgumentException(msg);
 		} else {
-			abstractInterpreter.parseCssDocument(path, name);
+			try {
+				abstractInterpreter.parseCssDocument(path, name);
+			} catch (CssStyleSheetException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 	
