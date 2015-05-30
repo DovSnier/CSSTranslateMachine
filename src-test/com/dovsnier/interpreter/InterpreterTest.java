@@ -18,8 +18,9 @@ import org.junit.Test;
 public class InterpreterTest {
 	
 	private String path = "c:\\temp";
-	private String name = "nav.css";
+	private String name = "nav-note.css";
 	
+	// private String name = "nav.css";
 	// private String expected = "";
 	/**
 	 * Test method for {@link com.dovsnier.interpreter.Interpreter#parseCssDocument(java.lang.String, java.lang.String)}.
