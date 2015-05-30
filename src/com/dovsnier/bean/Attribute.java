@@ -17,8 +17,24 @@ import java.io.Serializable;
 public class Attribute implements Serializable {
 	
 	private static final long serialVersionUID = 1084937343734226827L;
+	private String annotation;
 	private String key;
 	private String value;
+	
+	/**
+	 * @return the annotation
+	 */
+	public String getAnnotation() {
+		return annotation;
+	}
+	
+	/**
+	 * @param annotation
+	 *            the annotation to set
+	 */
+	public void setAnnotation(String annotation) {
+		this.annotation = annotation;
+	}
 	
 	/**
 	 * @return the key
