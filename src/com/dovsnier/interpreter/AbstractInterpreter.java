@@ -18,6 +18,10 @@ public abstract class AbstractInterpreter {
 	protected String TAG = this.getClass().getSimpleName().substring((this.getClass().getSimpleName().lastIndexOf(".") + 1));
 	/** the default value */
 	public static final long DEFAULT = -1l;
+	/** the operation result success code */
+	public static final long FAIL = -2l;
+	/** the operation result fail code */
+	public static final long SUCCESS = -3l;
 	
 	/**
 	 * the parsed css style documents that maybe is file or directory <br>
@@ -27,7 +31,7 @@ public abstract class AbstractInterpreter {
 	 * @param path
 	 *            the current your decide directory
 	 */
-	public abstract void parseCssDocuments(String path);
+	public abstract void parseCssDocuments(final String path);
 	
 	/**
 	 * the parsed css style document with your decide <br>
@@ -37,5 +41,5 @@ public abstract class AbstractInterpreter {
 	 * @param path
 	 * @param name
 	 */
-	public abstract void parseCssDocument(String path, String name);
+	public abstract void parseCssDocument(final String path, final String name);
 }
