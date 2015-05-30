@@ -19,9 +19,25 @@ import java.util.LinkedList;
 public class NodeBean implements Serializable {
 	
 	private static final long serialVersionUID = 5991461693066020378L;
+	private String annotation;
 	private String nodeName;
 	private ArrayList<Attribute> attribute = new ArrayList<Attribute>();
 	private LinkedList<NodeBean> itemNode = new LinkedList<NodeBean>();
+	
+	/**
+	 * @return the annotation
+	 */
+	public String getAnnotation() {
+		return annotation;
+	}
+	
+	/**
+	 * @param annotation
+	 *            the annotation to set
+	 */
+	public void setAnnotation(String annotation) {
+		this.annotation = annotation;
+	}
 	
 	/**
 	 * @return the nodeName
