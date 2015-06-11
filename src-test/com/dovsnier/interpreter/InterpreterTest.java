@@ -16,10 +16,12 @@ import org.junit.Test;
  * 
  */
 public class InterpreterTest {
-	
+
 	private String path = "c:\\temp";
-	private String name = "nav-note.css";
-	
+	private String name = "register.css";
+
+	// private String name = "nav-note.css";
+
 	// private String name = "nav.css";
 	// private String expected = "";
 	/**

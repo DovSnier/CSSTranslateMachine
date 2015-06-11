@@ -15,15 +15,15 @@ import com.dovsnier.exception.CssStyleSheetException;
  * @since jdk 1.7
  */
 public class InterpreterFactory {
-	
+
 	private static AbstractInterpreter abstractInterpreter = null;
-	
+
 	/**
 	 * the initialization interpreter engine <br>
 	 * 2015年5月29日
 	 * 
 	 * @version 0.0.1
-	 * @return
+	 * @return AbstractInterpreter.SUCCESS value or AbstractInterpreter.FAIL value
 	 */
 	public static long initInterpreterEngine() {
 		synchronized (InterpreterFactory.class) {
@@ -36,14 +36,16 @@ public class InterpreterFactory {
 		}
 		return AbstractInterpreter.SUCCESS;
 	}
-	
+
 	/**
 	 * the parsed css style document with your decide <br>
 	 * 2015年5月29日
 	 * 
 	 * @version 0.0.1
 	 * @param path
+	 *            the absolute path
 	 * @param name
+	 *            the fiile name
 	 */
 	public synchronized static void parseCssDocument(String path, String name) {
 		if (null == abstractInterpreter) {
@@ -63,7 +65,21 @@ public class InterpreterFactory {
 			}
 		}
 	}
-	
+
+	/**
+	 * the parsed html document with your decide <br>
+	 * 2015-6-11
+	 * 
+	 * @version 0.0.1
+	 * @param path
+	 *            the absolute path
+	 * @param name
+	 *            the fiile name
+	 */
+	public synchronized static void parseHtmlDocument(String path, String name) {
+
+	}
+
 	/**
 	 * the destroy interpreter engine <br>
 	 * 2015年5月29日
